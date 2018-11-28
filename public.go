@@ -1,107 +1,103 @@
 package logger
 
-var internalLogger = NewLoggerEmpty(InfoLevel)
+var Instance = NewLoggerEmpty(InfoLevel)
 
 func SetLevel(level Level) {
-	internalLogger.SetLevel(level)
+	Instance.SetLevel(level)
 }
 
 func With(prefixes, tags, fields, sufixes map[string]interface{}) ILogger {
-	return internalLogger.With(prefixes, tags, fields, sufixes)
+	return Instance.With(prefixes, tags, fields, sufixes)
 }
 
 func WithPrefixes(prefixes map[string]interface{}) ILogger {
-	return internalLogger.WithPrefixes(prefixes)
+	return Instance.WithPrefixes(prefixes)
 }
 
 func WithTags(tags map[string]interface{}) ILogger {
-	return internalLogger.WithTags(tags)
+	return Instance.WithTags(tags)
 }
 
 func WithFields(fields map[string]interface{}) ILogger {
-	return internalLogger.WithFields(fields)
+	return Instance.WithFields(fields)
 }
 
 func WithSufixes(sufixes map[string]interface{}) ILogger {
-	return internalLogger.WithSufixes(sufixes)
+	return Instance.WithSufixes(sufixes)
 }
 
 func WithPrefix(key string, value interface{}) ILogger {
-	return internalLogger.WithPrefix(key, value)
+	return Instance.WithPrefix(key, value)
 }
 
 func WithTag(key string, value interface{}) ILogger {
-	return internalLogger.WithTag(key, value)
+	return Instance.WithTag(key, value)
 }
 
 func WithField(key string, value interface{}) ILogger {
-	return internalLogger.WithField(key, value)
+	return Instance.WithField(key, value)
 }
 
 func WithSufix(key string, value interface{}) ILogger {
-	return internalLogger.WithSufix(key, value)
+	return Instance.WithSufix(key, value)
 }
 
 func Print(message interface{}) IAddition {
-	return internalLogger.Print(message)
+	return Instance.Print(message)
 }
 
 func Debug(message interface{}) IAddition {
-	return internalLogger.Debug(message)
+	return Instance.Debug(message)
 }
 
 func Info(message interface{}) IAddition {
-	return internalLogger.Info(message)
+	return Instance.Info(message)
 }
 
 func Warn(message interface{}) IAddition {
-	return internalLogger.Warn(message)
+	return Instance.Warn(message)
 }
 
 func Error(message interface{}) IAddition {
-	return internalLogger.Error(message)
+	return Instance.Error(message)
 }
 
 func Panic(message interface{}) IAddition {
-	return internalLogger.Panic(message)
+	return Instance.Panic(message)
 }
 
 func Fatal(message interface{}) IAddition {
-	return internalLogger.Fatal(message)
+	return Instance.Fatal(message)
 }
 
 func Printf(format string, arguments ...interface{}) IAddition {
-	return internalLogger.Printf(format, arguments)
+	return Instance.Printf(format, arguments)
 }
 
 func Debugf(format string, arguments ...interface{}) IAddition {
-	return internalLogger.Debugf(format, arguments)
+	return Instance.Debugf(format, arguments)
 }
 
 func Infof(format string, arguments ...interface{}) IAddition {
-	return internalLogger.Infof(format, arguments)
+	return Instance.Infof(format, arguments)
 }
 
 func Warnf(format string, arguments ...interface{}) IAddition {
-	return internalLogger.Warnf(format, arguments)
+	return Instance.Warnf(format, arguments)
 }
 
 func Errorf(format string, arguments ...interface{}) IAddition {
-	return internalLogger.Errorf(format, arguments)
+	return Instance.Errorf(format, arguments)
 }
 
 func Panicf(format string, arguments ...interface{}) IAddition {
-	return internalLogger.Panicf(format, arguments)
+	return Instance.Panicf(format, arguments)
 }
 
 func Fatalf(format string, arguments ...interface{}) IAddition {
-	return internalLogger.Fatalf(format, arguments)
+	return Instance.Fatalf(format, arguments)
 }
 
 func Reconfigure(options ...LoggerOption) {
-	internalLogger.Reconfigure(options...)
-}
-
-func Get() ILogger {
-	return internalLogger
+	Instance.Reconfigure(options...)
 }
