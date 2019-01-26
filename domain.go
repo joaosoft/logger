@@ -44,6 +44,14 @@ type ILogger interface {
 	Fatalf(format string, arguments ...interface{}) IAddition
 	Printf(format string, arguments ...interface{}) IAddition
 
+	IsDebugEnabled() bool
+	IsInfoEnabled() bool
+	IsWarnEnabled() bool
+	IsErrorEnabled() bool
+	IsPanicEnabled() bool
+	IsFatalEnabled() bool
+	IsPrintEnabled() bool
+
 	Reconfigure(options ...LoggerOption)
 }
 

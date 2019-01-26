@@ -221,6 +221,34 @@ func (logger *Logger) Panicf(format string, arguments ...interface{}) IAddition 
 	return NewAddition(msg)
 }
 
+func (logger *Logger) IsDebugEnabled() bool {
+	return logger.level == DebugLevel
+}
+
+func (logger *Logger) IsInfoEnabled() bool {
+	return logger.level == InfoLevel
+}
+
+func (logger *Logger) IsWarnEnabled() bool {
+	return logger.level == WarnLevel
+}
+
+func (logger *Logger) IsErrorEnabled() bool {
+	return logger.level == ErrorLevel
+}
+
+func (logger *Logger) IsPanicEnabled() bool {
+	return logger.level == PanicLevel
+}
+
+func (logger *Logger) IsFatalEnabled() bool {
+	return logger.level == FatalLevel
+}
+
+func (logger *Logger) IsPrintEnabled() bool {
+	return logger.level == PrintLevel
+}
+
 func (logger *Logger) writeLog(level Level, message interface{}) {
 	if level > logger.level {
 		return
