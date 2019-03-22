@@ -98,6 +98,34 @@ func Fatalf(format string, arguments ...interface{}) IAddition {
 	return Instance.Fatalf(format, arguments)
 }
 
+func  IsDebugEnabled() bool {
+return Instance.IsDebugEnabled()
+}
+
+func  IsInfoEnabled() bool {
+	return Instance.IsInfoEnabled()
+}
+
+func  IsWarnEnabled() bool {
+	return Instance.IsWarnEnabled()
+}
+
+func  IsErrorEnabled() bool {
+	return Instance.IsErrorEnabled()
+}
+
+func  IsPanicEnabled() bool {
+	return Instance.IsPanicEnabled()
+}
+
+func  IsFatalEnabled() bool {
+	return Instance.IsFatalEnabled()
+}
+
+func  IsPrintEnabled() bool {
+	return Instance.IsPrintEnabled()
+}
+
 func Reconfigure(options ...LoggerOption) {
 	Instance.Reconfigure(options...)
 }

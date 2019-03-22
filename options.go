@@ -1,9 +1,10 @@
 package logger
 
 import (
-	writer "github.com/joaosoft/writers"
-	"io"
 	"fmt"
+	"io"
+
+	writer "github.com/joaosoft/writers"
 )
 
 // LoggerOption ...
@@ -44,7 +45,7 @@ func WithFormatHandler(formatHandler writer.FormatHandler) LoggerOption {
 	}
 }
 
-func WithOpt(prefixes, tags, fields map[string]interface{}) LoggerOption {
+func WithOptions(prefixes, tags, fields map[string]interface{}) LoggerOption {
 	return func(logger *Logger) {
 		logger.prefixes = prefixes
 		logger.tags = tags
