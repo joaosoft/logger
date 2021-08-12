@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	writer "github.com/joaosoft/writers"
+	writer "writers"
 )
 
 var logger = NewLoggerEmpty(InfoLevel)

@@ -7,7 +7,7 @@ import (
 
 	"logger"
 
-	writer "github.com/joaosoft/writers"
+	writer "writers"
 )
 
 type Example struct{}

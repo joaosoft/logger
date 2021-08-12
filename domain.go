@@ -3,7 +3,7 @@ package logger
 import (
 	"io"
 
-	"github.com/joaosoft/writers"
+	"writers"
 )
 
 type IAddition interface {

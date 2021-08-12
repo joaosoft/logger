@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"github.com/joaosoft/errors"
+	"errors"
 )
 
 type Addition struct {
