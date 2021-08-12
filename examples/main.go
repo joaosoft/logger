@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"logger"
+	"github.com/joaosoft/logger"
 
 	writer "github.com/joaosoft/writers"
 )
