@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	writer "writers"
+	writer "github.com/joaosoft/writers"
 )
 
 // LoggerOption ...
