@@ -1,0 +1,8 @@
+# github.com/joaosoft/errors v0.0.0-20210812101433-f58fbcc4c1c8
+## explicit
+github.com/joaosoft/errors
+# github.com/joaosoft/writers v0.0.0-20210812101356-becb38cb2fa6
+## explicit
+github.com/joaosoft/writers
+# github.com/satori/go.uuid v1.2.0
+github.com/satori/go.uuid
