@@ -48,7 +48,7 @@ func (e Example) ExampleLevelInfo() {
 	// log to text
 	fmt.Println(":: LOG NONE")
 	log := logger.NewLogger(
-		logger.WithLevel(logger.NoneLevel),
+		logger.WithLevel(logger.LevelNone),
 		logger.WithFormatHandler(writer.JsonFormatHandler),
 		logger.WithWriter(os.Stdout)).
 		With(
@@ -72,7 +72,7 @@ func (e Example) ExampleAdditionError() {
 	// log to text
 	fmt.Println(":: LOG TEXT")
 	log := logger.NewLogger(
-		logger.WithLevel(logger.InfoLevel),
+		logger.WithLevel(logger.LevelInfo),
 		logger.WithFormatHandler(writer.TextFormatHandler),
 		logger.WithWriter(os.Stdout)).
 		With(
@@ -90,7 +90,7 @@ func (e Example) ExampleDefaultLogger() {
 	// log to text
 	fmt.Println(":: LOG TEXT")
 	log := logger.NewLogger(
-		logger.WithLevel(logger.InfoLevel),
+		logger.WithLevel(logger.LevelInfo),
 		logger.WithFormatHandler(writer.TextFormatHandler),
 		logger.WithWriter(os.Stdout)).
 		With(
@@ -112,7 +112,7 @@ func (e Example) ExampleDefaultLogger() {
 	// log to json
 	fmt.Println(":: LOG JSON")
 	log = logger.NewLogger(
-		logger.WithLevel(logger.InfoLevel),
+		logger.WithLevel(logger.LevelInfo),
 		logger.WithFormatHandler(writer.JsonFormatHandler),
 		logger.WithWriter(os.Stdout)).
 		With(
@@ -132,7 +132,7 @@ func (e Example) ExampleNoneLogger() {
 	// log to none
 	fmt.Println(":: LOG NONE")
 	log := logger.NewLogger(
-		logger.WithLevel(logger.NoneLevel),
+		logger.WithLevel(logger.LevelNone),
 		logger.WithFormatHandler(writer.JsonFormatHandler),
 		logger.WithWriter(os.Stdout)).
 		With(
@@ -163,7 +163,7 @@ func (e Example) ExampleFileWritter() {
 	// log to json
 	fmt.Println(":: LOG JSON")
 	log := logger.NewLogger(
-		logger.WithLevel(logger.InfoLevel),
+		logger.WithLevel(logger.LevelInfo),
 		logger.WithSpecialWriter(fileWriter)).
 		With(
 			map[string]interface{}{"level": logger.LEVEL, "timestamp": logger.TIMESTAMP, "date": logger.DATE, "time": logger.TIME},
@@ -199,7 +199,7 @@ func (e Example) ExampleStdoutWritter() {
 	// log to json
 	fmt.Println(":: LOG JSON")
 	log := logger.NewLogger(
-		logger.WithLevel(logger.InfoLevel),
+		logger.WithLevel(logger.LevelInfo),
 		logger.WithSpecialWriter(stdoutWriter)).
 		With(
 			map[string]interface{}{"level": logger.LEVEL, "timestamp": logger.TIMESTAMP, "date": logger.DATE, "time": logger.TIME},
@@ -235,7 +235,7 @@ func (e Example) ExampleStdoutWritterWithPanic() {
 	// log to json
 	fmt.Println(":: LOG JSON")
 	log := logger.NewLogger(
-		logger.WithLevel(logger.InfoLevel),
+		logger.WithLevel(logger.LevelInfo),
 		logger.WithSpecialWriter(stdoutWriter)).
 		With(
 			map[string]interface{}{"level": logger.LEVEL, "timestamp": logger.TIMESTAMP, "date": logger.DATE, "time": logger.TIME},
@@ -277,7 +277,7 @@ func (e Example) ExampleFileWritterWithPanic() {
 	// log to json
 	fmt.Println(":: LOG JSON")
 	log := logger.NewLogger(
-		logger.WithLevel(logger.InfoLevel),
+		logger.WithLevel(logger.LevelInfo),
 		logger.WithSpecialWriter(fileWriter)).
 		With(
 			map[string]interface{}{"level": logger.LEVEL, "timestamp": logger.TIMESTAMP, "date": logger.DATE, "time": logger.TIME},
